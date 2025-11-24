@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudyTrack – Organização de Estudos</title>
+  <meta name="description" content="StudyTrack é um app acadêmico desenvolvido com TDD e Scrum para ajudar estudantes a planejar e acompanhar sua rotina de estudos." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Botão voltar ao topo -->
+  <button id="backToTop" aria-label="Voltar ao topo">▲</button>
+
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">Study<span>Track</span></div>
+
+      <nav class="nav">
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+          ☰
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Início</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#features">Funcionalidades</a></li>
+          <li><a href="#process">Metodologia</a></li>
+          <li><a href="#validation">Validação</a></li>
+          <li><a href="#tech">Tecnologias</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text reveal">
+        <h1>StudyTrack</h1>
+        <p class="subtitle">
+          Organização inteligente de estudos para estudantes que precisam de foco,
+          constância e clareza sobre o próprio desempenho.
+        </p>
+        <div class="hero-buttons">
+          <a href="#about" class="btn primary">Entender o projeto</a>
+          <!-- Substitua o link abaixo pelo link real do Figma ou vídeo -->
+          
+        </div>
+        <p class="hero-note">
+          Projeto acadêmico desenvolvido para a disciplina <strong>Hands On Work VIII – UNIVALI</strong>,
+          utilizando <strong>TDD</strong> e <strong>Scrum</strong>.
+        </p>
+      </div>
+
+      <div class="hero-card reveal">
+        <div class="hero-card-inner">
+          <h2>Por que o StudyTrack?</h2>
+          <ul>
+            <li>📌 Dificuldade em manter rotina de estudos;</li>
+            <li>⏰ Falta de controle sobre o tempo realmente estudado;</li>
+            <li>📅 Esquecimento de provas, trabalhos e metas semanais.</li>
+          </ul>
+          <p>
+            O StudyTrack foi pensado para a comunidade estudantil: uma ferramenta simples,
+            com metas, Pomodoro e gráficos para dar visibilidade real ao esforço diário.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="about" class="section">
+    <div class="container section-content reveal">
+      <h2>Sobre o Projeto</h2>
+      <p>
+        O <strong>StudyTrack</strong> é um aplicativo mobile acadêmico criado para ajudar estudantes
+        a <strong>planejar, executar e acompanhar</strong> sua rotina de estudos. O projeto
+        surgiu a partir de conversas com colegas que relataram dificuldades em manter constância,
+        visualizar o próprio progresso e lembrar de prazos de trabalhos e avaliações.
+      </p>
+      <p>
+        A solução proposta combina três pilares principais:
+      </p>
+      <ul class="list">
+        <li><strong>Planejamento</strong> – definição de metas semanais por disciplina;</li>
+        <li><strong>Execução assistida</strong> – sessões de estudo usando a técnica Pomodoro;</li>
+        <li><strong>Acompanhamento</strong> – gráficos e indicadores de progresso e constância.</li>
+      </ul>
+      <p>
+        Este site resume o projeto, sua metodologia, os resultados alcançados e as tecnologias
+        utilizadas durante o desenvolvimento.
+      </p>
+    </div>
+  </section>
+
+  <!-- FUNCIONALIDADES -->
+  <section id="features" class="section section-alt">
+    <div class="container">
+      <h2 class="reveal">Funcionalidades Principais do MVP</h2>
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <h3>Metas de Estudo</h3>
+          <p>
+            Cadastro de metas semanais por disciplina, com horas de estudo sugeridas e
+            resumo visual do que já foi cumprido.
+          </p>
+        </div>
+        <div class="feature-card reveal">
+          <h3>Pomodoro Integrado</h3>
+          <p>
+            Sessões de estudo com cronômetro Pomodoro, pausa e retomada, registrando
+            automaticamente o tempo estudado.
+          </p>
+        </div>
+        <div class="feature-card reveal">
+          <h3>Progresso em Gráficos</h3>
+          <p>
+            Visualização de horas dedicadas por semana, sequência de dias ativos
+            (streak) e comparação com metas definidas.
+          </p>
+        </div>
+        <div class="feature-card reveal">
+          <h3>Notificações e Lembretes</h3>
+          <p>
+            Alertas sobre metas pendentes, resumo diário do estudo e lembretes de
+            sessões programadas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METODOLOGIA -->
+  <section id="process" class="section">
+    <div class="container">
+      <h2 class="reveal">Metodologia de Desenvolvimento</h2>
+
+      <div class="process-grid">
+        <div class="process-card reveal">
+          <h3>TDD – Test Driven Development</h3>
+          <p>
+            Cada funcionalidade foi planejada a partir de testes automatizados
+            escritos antes do código. O ciclo segue o fluxo:
+          </p>
+          <ol class="list">
+            <li>Escrever um teste para o comportamento desejado;</li>
+            <li>Executar o teste (ele falha inicialmente);</li>
+            <li>Implementar o código mínimo para o teste passar;</li>
+            <li>Refatorar, mantendo todos os testes verdes.</li>
+          </ol>
+          <p>
+            Esse processo reduz erros, melhora a qualidade do código e traz
+            confiança para evoluir o aplicativo.
+          </p>
+        </div>
+
+        <div class="process-card reveal">
+          <h3>Scrum Individual</h3>
+          <p>
+            O projeto foi organizado em quatro sprints quinzenais, usando
+            <strong>Scrum</strong> adaptado para um único desenvolvedor.
+          </p>
+          <ul class="list">
+            <li>Definição do Product Backlog no ClickUp;</li>
+            <li>Planejamento de sprints com metas claras;</li>
+            <li>Revisão e retrospectiva ao final de cada ciclo;</li>
+            <li>Incrementos funcionais entregues a cada sprint.</li>
+          </ul>
+          <p>
+            Essa abordagem garantiu ritmo de trabalho, organização e foco
+            nas entregas mais importantes do MVP StudyTrack.
+          </p>
+
+          <p class="small">
+            Link público do quadro (quando disponível):<br />
+            <a href="INSIRA_LINK_DO_CLICKUP_AQUI" target="_blank">
+              INSIRA_LINK_DO_CLICKUP_AQUI
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALIDAÇÃO -->
+  <section id="validation" class="section section-alt">
+    <div class="container">
+      <h2 class="reveal">Aplicação e Validação com Usuários</h2>
+      <div class="validation-grid">
+        <div class="validation-text reveal">
+          <p>
+            Após a implementação do MVP, o StudyTrack foi testado por um grupo de
+            estudantes universitários durante uma semana de uso real. O objetivo
+            foi avaliar usabilidade, clareza e impacto na organização dos estudos.
+          </p>
+          <ul class="list">
+            <li><strong>100%</strong> conseguiram criar metas sem ajuda;</li>
+            <li><strong>80%</strong> utilizaram o app em pelo menos 4 dias na semana;</li>
+            <li><strong>Média de satisfação:</strong> 4,6 / 5;</li>
+            <li>Principais sugestões: modo noturno e metas automáticas por disciplina.</li>
+          </ul>
+        </div>
+
+        <div class="validation-card reveal">
+          <h3>Resultados em resumo</h3>
+          <p>
+            A validação confirmou que o StudyTrack:
+          </p>
+          <ul class="list">
+            <li>É fácil de entender e usar;</li>
+            <li>Ajuda a visualizar o esforço de estudo ao longo da semana;</li>
+            <li>Contribui para criar uma rotina mais consistente.</li>
+          </ul>
+          <p class="small">
+            Evidências de validação: formulários, prints do protótipo e logs
+            de uso do MVP (não disponibilizados publicamente por se tratar
+            de um projeto acadêmico).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECNOLOGIAS -->
+  <section id="tech" class="section">
+    <div class="container">
+      <h2 class="reveal">Tecnologias Utilizadas</h2>
+      <div class="tech-grid">
+        <div class="tech-item reveal">React Native</div>
+        <div class="tech-item reveal">JavaScript / TypeScript</div>
+        <div class="tech-item reveal">JSON Server</div>
+        <div class="tech-item reveal">Jest</div>
+        <div class="tech-item reveal">React Testing Library</div>
+        <div class="tech-item reveal">Scrum / ClickUp</div>
+        <div class="tech-item reveal">TDD</div>
+        <div class="tech-item reveal">Expo</div>
+      </div>
+      <p class="tech-note">
+        Este site foi desenvolvido apenas com <strong>HTML, CSS e JavaScript puro</strong>
+        para apresentar o projeto acadêmico StudyTrack e facilitar sua visualização
+        via GitHub Pages.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contact" class="section section-alt">
+    <div class="container section-content reveal">
+      <h2>Contato e Código-Fonte</h2>
+      <p>
+        O StudyTrack foi desenvolvido por <strong>Nicolas Barth Souza</strong> como parte
+        da disciplina Hands On Work VIII, do curso de Análise e Desenvolvimento de Sistemas
+        da Universidade do Vale do Itajaí (UNIVALI).
+      </p>
+      <p>
+        Você pode acessar o repositório do projeto e este site no GitHub:
+      </p>
+      <ul class="list">
+        <li>
+          Repositório do projeto: 
+          <a href="https://github.com/Nicolasbarth221/HOX-VIIII" target="_blank">
+            Github
+          </a>
+        </li>
+        <li>
+          E-mail para contato:
+          <a href="mailto:nicolasbarthsouza84@edu.univali.br">
+            nicolasbarthsouza84@edu.univali.br
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2025 StudyTrack – Projeto acadêmico de Nicolas Barth Souza.</p>
+      <p class="footer-small">
+        Desenvolvido com HTML, CSS e JavaScript para apresentação no GitHub Pages.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
